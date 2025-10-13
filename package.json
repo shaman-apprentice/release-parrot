@@ -1,0 +1,48 @@
+{
+  "name": "@shaman-apprentice/release-parrot",
+  "version": "0.0.0",
+  "description": "Automate changelog and package version bumps for Node.js libraries.",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "bin": {
+    "release-parrot": "./bin/index.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm run test"
+  },
+  "keywords": [
+    "changelog",
+    "semver",
+    "release",
+    "automation"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaman-apprentice/release-parrot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shaman-apprentice/release-parrot/issues"
+  },
+  "homepage": "https://github.com/shaman-apprentice/release-parrot#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+
+  }
+}
