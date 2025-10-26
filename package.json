@@ -1,6 +1,6 @@
 {
   "name": "@shaman-apprentice/release-parrot",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Automate changelog and package version bumps for Node.js libraries.",
   "type": "module",
   "main": "./src/index.mjs",
