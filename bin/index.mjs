@@ -14,8 +14,8 @@ if (options.help) {
   process.exit(0);
 } else {
   try {
-    const releasedVersion = await bumpRelease(options);
-    console.log(`Successfully prepared ${version2Str(releasedVersion)} - (updated ${options.pathToChangelog} and ${options.pathToPackageJson})`);
+    const bump = await bumpRelease(options);
+    console.log(`Successfully prepared ${version2Str(bump.nextVersion)} - (updated ${options.pathToChangelog} and ${options.pathToPackageJson})`);
   } catch (error) {
     if (error instanceof ReleaseParrotError) {
       console.error(error.message);
@@ -54,5 +54,7 @@ Options:
                      Start of heading to search for, that marks fixes (default: ### Fixed)
       --wipHeading <heading>
                      Start of heading to search for, that marks WIP entries (default: ### WIP)
+      --releaseHeaderTemplate <template>
+                     Optional template for release header with {{previousVersion}} and {{nextVersion}} placeholders. Defaults to "## [{{nextVersion}}] - YYYY-MM-DD"
 `);
 }

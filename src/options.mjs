@@ -1,6 +1,6 @@
 // @ts-check
 
-// Don't forget to update help string when changing options.
+// Don't forget to update help string in /bin/index.mjs and in README.md when changing options.
 /** @satisfies {import('node:util').ParseArgsConfig} */ 
 export const OptionsDefinition = {
   options: {
@@ -13,6 +13,7 @@ export const OptionsDefinition = {
     featHeading: { type: "string", default: "### Feat" },
     fixedHeading: { type: "string", default: "### Fixed" },
     wipHeading: { type: "string", default: "### WIP" },
+    releaseHeaderTemplate: { type: "string" },
   },
   strict: true,
 };

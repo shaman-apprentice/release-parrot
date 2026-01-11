@@ -45,6 +45,7 @@ All of these flags map one-to-one to the `bumpRelease` options when you consume 
 | `--featHeading <heading>` | Heading that lists new features. | `### Feat` |
 | `--fixedHeading <heading>` | Heading that lists fixes. | `### Fixed` |
 | `--wipHeading <heading>` | Heading that marks work-in-progress entries. Presence of this section aborts the release. | `### WIP` |
+| `--releaseHeaderTemplate <template>` | Template for the release header with `{{previousVersion}}` and `{{nextVersion}}` placeholders. When provided, it replaces the default `## [version] - date` format. | `'## [{{nextVersion}}] - YYYY-MM-DD'` |
 
 
 ## Behaviour details

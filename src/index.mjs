@@ -27,7 +27,7 @@ export async function bumpRelease(partialOptions) {
     ? str2Version(options.nextVersion)
     : calculateVersionByReleaseSummary(parsedPackageJson.version, releaseSummary);
   await Promise.all([
-    updateChangelog(options.pathToChangelog, releaseSummary.startLine, nextVersion),
+    updateChangelog(options.pathToChangelog, releaseSummary.startLine, nextVersion, previousVersion, options.releaseHeaderTemplate),
     updatePackageVersion(options.pathToPackageJson, parsedPackageJson, nextVersion),
   ]);
 
