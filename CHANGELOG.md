@@ -4,6 +4,8 @@ This changelog is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [unreleased] (Breaking 🐱 | Feat 🚀 | Fixed 🐞)
 
+## [1.1.1] - 2026-01-12 ([full diff](https://github.com/shaman-apprentice/release-parrot/compare/v1.1.0...v1.1.1))
+
 ### Fixed 🐞
 
 - Remove prerelease suffix when bumping prerelease instead of incrementing version.
