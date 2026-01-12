@@ -6,7 +6,7 @@ import { bumpRelease, version2Str } from "../src/index.mjs";
 const execFileAsync = promisify(execFile);
 
 const releaseDate = new Date().toISOString().slice(0, 10);
-const { nextVersion } = await bumpRelease({ // todo version + date
+const { nextVersion } = await bumpRelease({
   releaseHeaderTemplate: `## [{{nextVersion}}] - ${releaseDate} ([full diff](https://github.com/shaman-apprentice/release-parrot/compare/v{{previousVersion}}...v{{nextVersion}}))`,
 });
 const nextTag = `v${version2Str(nextVersion)}`;

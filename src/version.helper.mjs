@@ -9,6 +9,9 @@ import { InvalidCurrentVersion } from './errors.mjs';
  * @returns {VersionNumber}
  */
 export function calculateVersionByReleaseSummary(currentVersion, releaseSummary) {
+  if (currentVersion.prerelease)
+    return { major: currentVersion.major, minor: currentVersion.minor, patch: currentVersion.patch };
+
   if (releaseSummary.unreleasedTotals.breaking > 0)
     return { major: currentVersion.major + 1, minor: 0, patch: 0 };
 

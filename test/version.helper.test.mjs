@@ -104,4 +104,18 @@ describe('version.helper', () => {
     assert.equal(compareVersionNumbers(alpha1, alpha2), -1);
     assert.equal(compareVersionNumbers(release, alpha2), 1);
   });
+
+  it('bumps a prerelease through removing prerelease suffix', () => {
+    const summary = {
+      startLine: 0,
+      endLine: 0,
+      unreleasedTotals: { breaking: 0, feat: 0, fixed: 5 },
+    };
+    const currentVersion = { major: 1, minor: 2, patch: 3, prerelease: 'alpha.1' };
+
+    assert.deepEqual(
+      calculateVersionByReleaseSummary(currentVersion, summary),
+      { major: 1, minor: 2, patch: 3 },
+    );
+  });
 });
